@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme = 'dark'> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>the Icon effect with dark and light Mode</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html[data-theme='light']{
+            --bg: #ebf5fc;
+            --box-shadow: -2px -2px 5px rgba(255,255,255,1),
+                        3px 3px 5px rgba(0,0,0,0.1);
+
+            --box-shadow-inset: -2px -2px 5px rgba(255,255,255,1),
+                        3px 3px 5px rgba(0,0,0,0.1);
+
+                
+            --icon-color: #0577c9;
+            --btn-bg: #222;
+            --text-color: #ebf5fc;
+        }
+        html[data-theme='dark']{
+            --bg: #222;
+            --box-shadow: -2px -2px 5px rgba(255,255,255,0.051),
+                        3px 3px 5px rgba(0,0,0,0.5);
+
+            --box-shadow-inset: -2px -2px 5px rgba(255,255,255,01),
+                        3px 3px 5px rgba(0,0,0,0.8);
+
+                
+            --icon-color: #298dd4;
+            --btn-bg: #222;
+            --text-color: #222;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--bg);
+        }
+
+        .mode{
+            top: 18%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            position:absolute;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            font-size: 2rem;
+            font-weight: bold;
+            border-radius: 5px;
+            border:none;outline:none;
+            cursor: pointer;
+            background-color: var(--bg);
+            color: var(--text-color);
+        }
+
+        ul{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            border-radius: 10px;
+            padding: 20px;
+            width: 240px;
+            background-color: var(--bg);
+            box-shadow: var(--box-shadow);
+        }
+        ul li{
+            position: relative;
+            list-style: none;
+            text-align: center;
+            margin: 15px;
+        }
+
+        ul li label { position: relative; cursor: pointer;}
+
+        ul li label input[type='checkbox'] { position:absolute; opacity: 0; }
+
+        ul li label :checked ~ .icon-box { box-shadow: var(--box-shadow-inset); }
+        ul li label :checked ~ .icon-box .fa { transform: scale(0.8); }
+        ul li label .icon-box { 
+            width: 60px;
+            height: 60px;background-color: var(--bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: var(--box-shadow);
+            border-radius: 10px;
+         }
+
+         ul li label .icon-box .fa{ font-size: 2.2rem; color: var(--icon-color);  }
+    </style>
+
+</head>
+<body>
+    <div class="social-icons">
+        <button class="mode">Dark</button>
+        <ul>
+            <li>
+                <label>
+                    <input type='checkbox' name=''>
+                    <div class="icon-box">
+                        <i class="fa fa-home"></i>
+                    </div>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type='checkbox' name=''>
+                    <div class="icon-box">
+                        <i class="fa fa-user"></i>
+                    </div>
+                </label>
+            </li>
+
+            <li>
+                <label>
+                    <input type='checkbox' name=''>
+                    <div class="icon-box">
+                        <i class="fa fa-facebook"></i>
+                    </div>
+                </label>
+            </li>
+
+            <li>
+                <label>
+                    <input type='checkbox' name=''>
+                    <div class="icon-box">
+                        <i class="fa fa-youtube"></i>
+                    </div>
+                </label>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const mode = document.querySelector('.mode');
+
+        let dark = false;
+
+        mode.addEventListener('click', ()=> {
+            if(dark){
+                dark = false;
+                document.documentElement.setAttribute('data-theme','dark');
+                mode.textContent = 'dark';
+            }else {
+                dark = true; 
+                document.documentElement.setAttribute('data-theme','light');
+                mode.textContent = 'light';
+            }
+        })
+    </script>
+</body>
+</html>
