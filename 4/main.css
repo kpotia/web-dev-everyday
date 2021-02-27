@@ -1,0 +1,124 @@
+:root{
+	--dark-grey: #111827;
+	--white: #f8f8f8;
+	--indigo-100: #e0e7ff;
+	--indigo-300: #a5b4fc;
+	--indigo-400: #818cf8;
+	--indigo-600: #4338ca;
+	--indigo-900: #312e81;
+}
+
+body{
+	width: 100vw;
+	overflow: hidden;
+	background-color: var(--white); 
+	font-family: sans-serif;
+	margin: 0;
+}
+
+body.dark{
+	background-color: var(--dark-grey); 
+	color: var(--white);
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: var(--indigo-100);
+	width: 100%;
+	height: 64px;
+}
+
+
+body.dark nav{
+	background-color: var(--indigo-600);
+}
+
+.nav-links a {
+	color: var(--indigo-900);
+	font-weight: 500;
+	font-size: 20px;
+	text-decoration: none;
+	cursor: pointer;
+	padding-right: 2.5rem; 
+}
+
+strong{
+	color: var(--indigo-900);
+	font-size: 20px;
+}
+
+body.dark .nav-links a{
+	color: var(--white);
+
+}
+body.dark strong{
+	color: var(--white);
+}
+
+
+.checkbox {
+	opacity: 0;
+	top: 5;right:5;
+	position: absolute;
+}
+
+.label {
+	background-color: var(--indigo-900);
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 18px;
+	width: 48px;
+	transform: scale(1.25);
+}
+
+.ball{
+	background-color: white;
+	border-radius:  50%;
+	position: absolute;
+	top:3px;
+	left: 3px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear; 
+}
+
+.checkbox:checked + .label .ball{
+	transform: translateX(28px);
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 60vw;
+	margin: 7% auto;
+}
+
+main p{
+	line-height: 1.4;
+	font-size: 21px;
+}
+
+button {
+	background-color: var(--indigo-600);
+	color: var(--white);
+	border: 2px solid var(--indigo-600);
+	font-size: 18px;
+	font-weight: 400;
+	text-transform: lowercase;
+	cursor: pointer;
+	border-radius: 3px;
+	width: 220px;
+	padding: 15px 33px;
+	margin: 2rem auto;
+	transition: all 0.2s linear;
+}
