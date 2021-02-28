@@ -10,3 +10,7 @@ here is the list and description of the task.
 |31/07/2020|2|Smouth Product Card|
 |01/08/2020|3|contact us form|
 |27/02/2021|4|Hero Header Background Color Switcher|
+|28/02/2021|5|Smooth scroll in real world website design|
+
+
+
