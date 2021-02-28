@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Smooth scroll effect</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<nav>
+		<a href="#section-1">Vanilla Js Smooth scroll</a>
+		<a href="#section-2">Easy to use</a>
+		<a href="#section-3">Usage</a>
+		<a href="#section-4">Options</a>
+		<a href="#section-5">Thats it</a>
+	</nav>
+
+	<section id="section-1">
+		<h3>Vanilla smooth scroll</h3>
+	</section>
+	<section id="section-2">
+		<h3>Easiest smooth scroll</h3>
+	</section>
+	<section id="section-3">
+		<h3>Love this smooth scroll</h3>
+	</section>
+	<section id="section-4">
+		<h3>smooth scroll</h3>
+	</section>
+	<section id="section-5">
+		<h3>Its as easy 1,2,3</h3>
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/npm/scrolltosmooth/dist/scrolltosmooth.min.js"></script>
+	<script type="text/javascript">
+		let smoothScroll = new scrollToSmooth('a', {
+	  targetAttribute: 'href',
+	  duration: 800,
+	  durationRelative: false,
+	  durationMin: false,
+	  durationMax: false,
+	  easing: 'easeInOutCubic',
+	  onScrollStart: (data) => { console.log(data); },
+	  onScrollUpdate: (data) => { console.log(data); },
+	  onScrollEnd: (data) => { console.log(data); },
+	  fixedHeader: null
+	});
+	smoothScroll.init();
+	</script>
+</body>
+</html>
