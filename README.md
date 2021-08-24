@@ -12,5 +12,7 @@ here is the list and description of the task.
 |27/02/2021|4|Hero Header Background Color Switcher|
 |28/02/2021|5|Smooth scroll in real world website design|
 |23/08/2021|6|One Page HTML and CSS  Smooth Scroll Website |
+|24/08/2021|6|Latest CSS Popup Menu Clickable animation effect with navigation menus |
+ 
  
 
