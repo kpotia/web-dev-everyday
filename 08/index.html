@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Animated Toggle Nav menu with Hamburger menu transforming using HTML CSS JS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		* {
+			transition-timing-function: ease-out;
+			box-sizing: border-box ;
+			text-decoration: none;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		body{
+			color: #f2f2f2;
+			background: url(bg.jpg);
+			height: 100vh;
+			background-size:cover ;
+			background-position: center;
+			font-family: monospace;
+			background-attachment: fixed;
+		}
+
+		.toggleNav{
+			border-bottom: 5px solid deepskyblue;
+			background-color: deepskyblue;
+			width: 100%;
+			height: 80px;
+			text-align: center;
+			line-height: 80px;
+			cursor: pointer;
+			color: white;
+			font-size: 30px;
+		}
+
+		nav{
+			width: 100%;
+			min-height: 50px;
+		}
+
+		.toggleNavButton{
+			transition-duration: 0.5s;
+			width: 40px;
+			height: 2px;
+			background-color: white;
+			position: absolute;
+			left: 50%;
+			top: 25px;
+			margin-left: -20px;
+			border-radius: 2px;
+			border:  none;
+		}
+
+		.toggleNavButton:before,
+		.toggleNavButton:after
+		{
+			border-radius: 2px;
+			transition-duration: 0.5s;
+			content: "";
+			width: 40px;
+			height: 2px;
+			background-color: white;
+			position: absolute;
+			left: 0;
+			top: 10px;
+		}
+
+		.toggleNavButton:after
+		{
+			top: 20px;
+		}
+
+
+		.toggleNavButton.active{
+			width: 0px;
+		}
+
+		.toggleNavButton.active::before{
+			top: 10px;
+			transform: rotate(45deg);
+		}
+
+		.toggleNavButton.active::after{
+			top: 10px;
+			transform: rotate(-45deg);
+		}
+
+		#subnav{
+			width: 100%;
+			border-bottom: 0 solid #34495e;
+			background-color: #34495e;
+			transition-duration: 0.2s;
+			overflow: hidden;
+			height: 0px;
+
+		}
+
+		#subnav.active{
+			height: 50px;
+		}
+
+		#subnav ul li{
+			transition-duration: 0.3s;
+			display: inline-block;
+			text-align: center;
+			width: 148px;
+			padding: 13px 0;
+			height: 50px;
+		}
+
+		#subnav ul li a{
+			color: white;
+			font-size: 20px;
+		}
+
+		#subnav ul li:hover{
+			background-color: hotpink;
+
+		}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="toggleNav">
+		<button class="toggleNavButton"></button>
+	</div>
+	<div id="subnav">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript">
+	$(".toggleNav").click(function(){
+		$("#subnav").toggleClass("active");
+		$(".toggleNavButton").toggleClass("active");
+	});
+</script>
+
+</body>
+</html>
