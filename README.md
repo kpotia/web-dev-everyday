@@ -15,6 +15,7 @@ here is the list and description of the task.
 |24/08/2021|7|Latest CSS Popup Menu Clickable animation effect with navigation menus |
 |26/08/2021|8|Animated Toggle Nav menu with Hamburger menu transforming using HTML CSS JS|
 |17/05/2022|9|CSS Isometric Menu Hover Effects @Online Tutorials Html CSS 3D Menu|
+|23/05/2022|10|Starbucks Landing Page Website Design using Html CSS & Javascript|
  
  
 
