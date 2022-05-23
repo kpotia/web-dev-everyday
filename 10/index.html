@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starbucks Website Landing Page</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+
+	<section>
+	<div class="circle"></div>
+		<header>
+			<a href="#" class="logo"><img src="./assets/logo.png"></a>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Menu</a></li>
+				<li><a href="#">What's New</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+
+		<div class="content">
+			<div class="textBox">
+				<h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
+				<p>Whether you're searching for something new to warm your mug, seeking the best brew method for your favorite blend or exploring our rarest offerings, you’ve come to the right place.</p>
+				<a href="#">Learn More</a>
+			</div>
+
+			<div class="imgBox">
+				<img src="./assets/img1.png" class="starbucks">
+			</div>
+		</div>
+		<ul class="thumb">
+			<li onclick="imgSlider('./assets/img1.png');changeCircleColor('#017143')"><img src="./assets/thumb1.png"></li>
+			<li onclick="imgSlider('./assets/img2.png');changeCircleColor('#eb7495')"><img src="./assets/thumb2.png"></li>
+			<li onclick="imgSlider('./assets/img3.png');changeCircleColor('#d752b1')"><img src="./assets/thumb3.png"></li>
+		</ul>
+
+		<ul class="sci">
+			<li><a href="#"><img src="./assets/facebook.png"></a></li>
+			<li><a href="#"><img src="./assets/twitter.png"></a></li>
+			<li><a href="#"><img src="./assets/instagram.png"></a></li>
+		</ul>
+	</section>
+
+	<script type="text/javascript">
+		function imgSlider(anything) {
+			document.querySelector('.starbucks').src = anything;
+		}
+
+		function changeCircleColor(color) {
+			const circle = document.querySelector('.circle');
+			circle.style.background = color;
+		}
+	</script>
+
+</body>
+</html>
