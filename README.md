@@ -17,6 +17,7 @@ here is the list and description of the task.
 |17/05/2022|9|CSS Isometric Menu Hover Effects @Online Tutorials Html CSS 3D Menu|
 |23/05/2022|10|Starbucks Landing Page Website Design using Html CSS & Javascript|
 |24/05/2022|11|Animated Profile Card UI Design using Html & CSS|
+|01/01/2023|11|CSS Animation Effects 2023|
  
  
 
